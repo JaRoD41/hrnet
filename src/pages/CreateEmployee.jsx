@@ -1,10 +1,31 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// import { useState } from 'react';
+import useModal from '../utils/custom hooks/useModal';
+// import {useNavigate} from 'react-router-dom';
+import Form from '../components/Form/Form';
+import Modal from '../components/Modal/Modal';
+
 const CreateEmployee = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+  const [isOpen, toggleModal] = useModal();
+  // const openModal = () => {
+  //   setIsOpen(true);
+  // };
+
+  // const closeModal = () => {
+  //   setIsOpen(false);
+  // };
   return (
     <>
-      <h1>Create an Employee</h1>
-      <button onClick={() => navigate('/employees')}>Employees</button>
+      <main aria-labelledby="page-title">
+        <h2 tabIndex="0" id="page-title">
+          Add an employee
+        </h2>
+        <Form />
+        {/* Modal */}
+        <button onClick={toggleModal}>Open Modal</button>
+        <Modal isOpen={isOpen} onClose={toggleModal}></Modal>
+      </main>
       <div className="link-employee-list">
         <Link to="/employees">-Employees Table-</Link>
       </div>
