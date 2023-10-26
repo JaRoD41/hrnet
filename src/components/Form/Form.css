@@ -1,0 +1,25 @@
+body {
+  background-color: var(--light);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  display: flex;
+  width: 20rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--middle);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  width: 40rem;
+  height: 45rem;
+  background-color: white;
+}

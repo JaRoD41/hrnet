@@ -8,13 +8,7 @@ import Modal from '../components/Modal/Modal';
 const CreateEmployee = () => {
   // const navigate = useNavigate();
   const [isOpen, toggleModal] = useModal();
-  // const openModal = () => {
-  //   setIsOpen(true);
-  // };
-
-  // const closeModal = () => {
-  //   setIsOpen(false);
-  // };
+  
   return (
     <>
       <main aria-labelledby="page-title">
@@ -23,7 +17,7 @@ const CreateEmployee = () => {
         </h2>
         <Form />
         {/* Modal */}
-        <button onClick={toggleModal}>Open Modal</button>
+        <button onClick={toggleModal}>Save</button>
         <Modal isOpen={isOpen} onClose={toggleModal}></Modal>
       </main>
       <div className="link-employee-list">

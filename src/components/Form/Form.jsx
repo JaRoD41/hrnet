@@ -1,12 +1,12 @@
-
+import './Form.css';
 const Form = () => {
   return (
     <>
-      <div className="flex-col">
+      <div className="form-container">
         <form action="#" id="create-employee">
-          <div className="flex flex-col md:flex-row md:space-x-4">
+          <div className="form-fields">
             <fieldset className="flex-col bg-gray-200 mb-6 md:w-1/2">
-              <legend className="pb-8">Personal Information</legend>
+              <legend className="pb-8">Personal</legend>
               <label htmlFor="first-name">First Name</label>
               <input
                 type="text"
@@ -27,14 +27,6 @@ const Form = () => {
               <label htmlFor="date-of-birth">Date of Birth</label>
               <input
                 id="date-of-birth"
-                type="text"
-                className="mt-1 w-full rounded-md bg-green-300 sm:text-sm"
-                // onChange={handleInputChange}
-              />
-
-              <label htmlFor="start-date">Start Date</label>
-              <input
-                id="start-date"
                 type="text"
                 className="mt-1 w-full rounded-md bg-green-300 sm:text-sm"
                 // onChange={handleInputChange}
@@ -78,22 +70,30 @@ const Form = () => {
               />
             </fieldset>
           </div>
-
-          <label htmlFor="department">Department</label>
-          <select
-            name="department"
-            id="department"
-            className="mt-1 w-full rounded-md bg-pink-300 sm:text-sm"
-          >
-            <option>Sales</option>
-            <option>Marketing</option>
-            <option>Engineering</option>
-            <option>Human Resources</option>
-            <option>Legal</option>
-          </select>
+          <fieldset>
+            <legend className="pb-8">HR infos</legend>
+            <label htmlFor="start-date">Start Date</label>
+            <input
+              id="start-date"
+              type="text"
+              className="mt-1 w-full rounded-md bg-green-300 sm:text-sm"
+              // onChange={handleInputChange}
+            />
+            <label htmlFor="department">Department</label>
+            <select
+              name="department"
+              id="department"
+              className="mt-1 w-full rounded-md bg-pink-300 sm:text-sm"
+            >
+              <option>Sales</option>
+              <option>Marketing</option>
+              <option>Engineering</option>
+              <option>Human Resources</option>
+              <option>Legal</option>
+            </select>
+          </fieldset>
         </form>
       </div>
-      
     </>
   );
 }
