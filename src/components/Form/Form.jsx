@@ -92,6 +92,7 @@ const Form = () => {
               <option>Legal</option>
             </select>
           </fieldset>
+          <button className='save-button'>Save</button>
         </form>
       </div>
     </>

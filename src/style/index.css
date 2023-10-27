@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Playfair Display', serif;
-  line-height: 24px;
+  color : var(--cod-gray);
 }
 
 /* MAIN COLORS */
