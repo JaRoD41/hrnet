@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import './Select.css'
 // I use nanoid to generate unique key id for each select option
 
 /**
@@ -11,11 +12,9 @@ import { nanoid } from 'nanoid';
  * @return {JSX.Element} - The JSX element representing the select input field.
  */
 const Select = ({ label, value, options, onChange }) => {
-  console.log('options : ', options);
-
   return (
     <>
-      <label htmlFor={label}>
+      <label htmlFor={label} className={`${label}-label`}>
         {label}
         <select className={`${label}-select`} value={value} onChange={onChange}>
           {options &&
