@@ -1,19 +1,19 @@
 const departments = [
   {
+    label: 'department',
     name: 'Marketing',
-    id: 1,
   },
   {
+    label: 'department',
     name: 'Engineering',
-    id: 2,
   },
   {
+    label: 'department',
     name: 'Human Resources',
-    id: 3,
   },
   {
+    label: 'department',
     name: 'Legal',
-    id: 4,
   },
 ];
 

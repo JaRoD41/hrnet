@@ -1,11 +1,26 @@
 import './Form.css';
+import Select from '../Select/Select';
+import departments from '../../data/departments';
+import { useState } from 'react';
 const Form = () => {
+  const departmentOptions = departments;
+  const [selectValue, setSelectValue] = useState('');
+  const handleSelectChange = (e) => {
+    setSelectValue(e.target.value);
+  };
+
+  // const modalBtn = document.querySelector('.save-button');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // modalBtn.click();
+    console.log('formulaire soumis avec succes : ', selectValue);
+  };
   return (
     <>
       <div className="form-container">
         <form action="#" id="create-employee">
           <div className="form-fields">
-            <fieldset className="flex-col bg-gray-200 mb-6 md:w-1/2">
+            <fieldset>
               <legend className="pb-8">Personal</legend>
               <label htmlFor="first-name">First Name</label>
               <input
@@ -33,7 +48,7 @@ const Form = () => {
               />
             </fieldset>
 
-            <fieldset className="flex-col bg-gray-200 mb-6 md:w-1/2">
+            <fieldset>
               <legend className="pb-8">Address</legend>
 
               <label htmlFor="street">Street</label>
@@ -52,8 +67,10 @@ const Form = () => {
                 // onChange={handleInputChange}
               />
 
-              <label htmlFor="state">State</label>
-              {/* <select name="state" id="state" className="mt-1 w-full rounded-md bg-blue-300 sm:text-sm"></select> */}
+              {/* <label htmlFor="state">State</label>
+              <select name="state" id="state" className="state-select"></select> */}
+
+              <Select />
               {/* <Dropdown
                 options={options}
                 value={defaultOption}
@@ -79,24 +96,21 @@ const Form = () => {
               className="mt-1 w-full rounded-md bg-green-300 sm:text-sm"
               // onChange={handleInputChange}
             />
-            <label htmlFor="department">Department</label>
-            <select
-              name="department"
-              id="department"
-              className="mt-1 w-full rounded-md bg-pink-300 sm:text-sm"
-            >
-              <option>Sales</option>
-              <option>Marketing</option>
-              <option>Engineering</option>
-              <option>Human Resources</option>
-              <option>Legal</option>
-            </select>
+
+            <Select
+              label="Department"
+              value={selectValue}
+              options={departmentOptions}
+              onChange={handleSelectChange}
+            />
           </fieldset>
-          <button type='submit' className='save-button'>Save</button>
+          <button type="submit" className="save-button" onClick={handleSubmit}>
+            Save
+          </button>
         </form>
       </div>
     </>
   );
-}
+};
 
-export default Form
+export default Form;
