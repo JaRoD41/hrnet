@@ -1,11 +1,11 @@
-body {
-  background-color: var(--light);
-  height: 100vh;
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 375px;
+  width: 25rem;
+  height: 45rem;
+  background-color: pink;
 }
 
 fieldset {
@@ -17,20 +17,12 @@ fieldset {
   background-color: var(--middle);
 }
 
-.form-container {
-  display: flex;
-  justify-content: center;
-  /* width: 40rem;
-  height: 45rem; */
-  background-color: white;
-  padding: 4rem;
-}
-
 #create-employee {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 75%;
-  max-width: 500px;
+  width: 25rem;
+  height: 45rem;
+  background-color: pink;
 }
