@@ -12,7 +12,7 @@ const CreateEmployee = () => {
   return (
     <>
       <Header />
-      <main aria-labelledby="page-title">
+      <main>
         <h2 tabIndex="0" id="page-title">
           Add an employee
         </h2>

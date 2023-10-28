@@ -21,7 +21,7 @@ const Form = () => {
         <form action="#" id="create-employee">
           <div className="form-fields">
             <fieldset>
-              <legend className="pb-8">Personal</legend>
+              <legend className="legend-personal">Personal</legend>
               <label htmlFor="first-name">First Name</label>
               <input
                 type="text"
@@ -49,7 +49,7 @@ const Form = () => {
             </fieldset>
 
             <fieldset>
-              <legend className="pb-8">Address</legend>
+              <legend className="legend-adress">Address</legend>
 
               <label htmlFor="street">Street</label>
               <input
@@ -86,24 +86,25 @@ const Form = () => {
                 // onChange={handleInputChange}
               />
             </fieldset>
-          </div>
-          <fieldset>
-            <legend className="pb-8">HR infos</legend>
-            <label htmlFor="start-date">Start Date</label>
-            <input
-              id="start-date"
-              type="text"
-              className="mt-1 w-full rounded-md bg-green-300 sm:text-sm"
-              // onChange={handleInputChange}
-            />
+            <fieldset>
+              <legend className="legend-hr">HR infos</legend>
+              <label htmlFor="start-date">Start Date</label>
+              <input
+                id="start-date"
+                type="text"
+                className="mt-1 w-full rounded-md bg-green-300 sm:text-sm"
+                // onChange={handleInputChange}
+              />
 
-            <Select
-              label="Department"
-              value={selectValue}
-              options={departmentOptions}
-              onChange={handleSelectChange}
-            />
-          </fieldset>
+              <Select
+                label="Department"
+                value={selectValue}
+                options={departmentOptions}
+                onChange={handleSelectChange}
+              />
+            </fieldset>
+          </div>
+
           <button type="submit" className="save-button" onClick={handleSubmit}>
             Save
           </button>

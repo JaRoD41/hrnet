@@ -14,9 +14,9 @@ import './Select.css'
 const Select = ({ label, value, options, onChange }) => {
   return (
     <>
-      <label htmlFor={label} className={`${label}-label`}>
+      <label htmlFor={`${label}-select`} className={`${label}-label`}>
         {label}
-        <select className={`${label}-select`} value={value} onChange={onChange}>
+        <select id={`${label}-select`} value={value} onChange={onChange}>
           {options &&
             options.map((option) => (
               <option key={nanoid()} value={option.name}>
