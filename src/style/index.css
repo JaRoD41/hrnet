@@ -29,6 +29,10 @@ select {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* MAIN COLORS */
 :root {
   --light: #f0f3ea;
@@ -38,13 +42,13 @@ select {
 }
 
 body {
+  background: var(--light);
   font-family: 'Playfair Display', serif;
   color: var(--cod-gray);
 }
 
 #page-role {
-  font-size: 1.5rem;
-  font-weight: bold;
+  width: auto;
   margin: 2rem auto;
   padding: 0.5rem;
 }

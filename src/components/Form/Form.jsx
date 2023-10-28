@@ -2,6 +2,7 @@ import './Form.css';
 import Select from '../Select/Select';
 import departments from '../../data/departments';
 import { useState } from 'react';
+import addUser from '../../assets/users-add.svg';
 const Form = () => {
   const departmentOptions = departments;
   const [selectValue, setSelectValue] = useState('');
@@ -18,6 +19,11 @@ const Form = () => {
   return (
     <>
       <form action="#" id="create-employee">
+        <img
+          className="create-employee--ico"
+          src={addUser}
+          alt="create employee icon"
+        />
         <fieldset>
           <legend className="legend-personal">Personal</legend>
           <label htmlFor="first-name">First Name</label>

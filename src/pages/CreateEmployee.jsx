@@ -13,8 +13,8 @@ const CreateEmployee = () => {
     <>
       <Header />
       <main>
-        <h2 tabIndex="0" id="page-role">
-          Add an employee
+        <h2 id="page-role">
+          Create an employee
         </h2>
         <Form />
         {/* Modal */}
