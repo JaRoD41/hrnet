@@ -1,10 +1,12 @@
 import './Form.css';
 import Select from '../Select/Select';
 import departments from '../../data/departments';
+import states from '../../data/states';
 import { useState } from 'react';
 import addUser from '../../assets/users-add.svg';
 const Form = () => {
   const departmentOptions = departments;
+  const stateOptions = states;
   const [selectValue, setSelectValue] = useState('');
   const handleSelectChange = (e) => {
     setSelectValue(e.target.value);
@@ -26,86 +28,97 @@ const Form = () => {
         />
         <fieldset>
           <legend className="legend-personal">Personal</legend>
-          <label htmlFor="first-name">First Name</label>
-          <input
-            type="text"
-            id="first-name"
-            autoComplete="first-name"
-            className="mt-1 w-full rounded-md bg-green-300 sm:text-sm "
-            // onChange={handleInputChange}
-          />
+          <section className="create-employee-input-first-name">
+            <label htmlFor="first-name">First Name</label>
+            <input
+              type="text"
+              id="first-name"
+              autoComplete="off"
+              aria-required="true"
+              // onChange={handleInputChange}
+            />
+          </section>
 
-          <label htmlFor="last-name">Last Name</label>
-          <input
-            type="text"
-            id="last-name"
-            className="mt-1 w-full rounded-md bg-green-300 sm:text-sm"
-            // onChange={handleInputChange}
-          />
+          <section className="create-employee-input-last-name">
+            <label htmlFor="last-name">Last Name</label>
+            <input
+              type="text"
+              id="last-name"
+              autoComplete="off"
+              aria-required="true"
+              // onChange={handleInputChange}
+            />
+          </section>
 
-          <label htmlFor="date-of-birth">Date of Birth</label>
-          <input
-            id="date-of-birth"
-            type="text"
-            className="mt-1 w-full rounded-md bg-green-300 sm:text-sm"
-            // onChange={handleInputChange}
-          />
+          <section className="create-employee-input-date-of-birth">
+            <label htmlFor="date-of-birth">Date of Birth</label>
+            <input
+              type="date"
+              id="date-of-birth"
+              autoComplete="off"
+              aria-required="true"
+              // onChange={handleInputChange}
+            />
+          </section>
         </fieldset>
 
         <fieldset>
           <legend className="legend-adress">Address</legend>
 
-          <label htmlFor="street">Street</label>
-          <input
-            id="street"
-            type="text"
-            className="mt-1 w-full rounded-md bg-blue-300 sm:text-sm"
-            // onChange={handleInputChange}
-          />
+          <section className="create-employee-input-street">
+            <label htmlFor="street">Street</label>
+            <input
+              type="text"
+              id="street"
+              autoComplete="off"
+              aria-required="true"
+              // onChange={handleInputChange}
+            />
+          </section>
 
-          <label htmlFor="city">City</label>
-          <input
-            id="city"
-            type="text"
-            className="mt-1 w-full rounded-md bg-blue-300 sm:text-sm"
-            // onChange={handleInputChange}
-          />
+          <section className="create-employee-input-state">
+            <label htmlFor="state">State</label>
+            <Select
+              label="State"
+              value={selectValue}
+              options={stateOptions}
+              onChange={handleSelectChange}
+            />
+          </section>
 
-          {/* <label htmlFor="state">State</label>
-              <select name="state" id="state" className="state-select"></select> */}
-
-          <Select />
-          {/* <Dropdown
-                options={options}
-                value={defaultOption}
-                placeholder="Select an option"
-                className="mt-1 w-full rounded-md bg-blue-300 sm:text-sm"
-              /> */}
-
-          <label htmlFor="zip-code">Zip Code</label>
-          <input
-            id="zip-code"
-            type="number"
-            className="mt-1 w-full rounded-md bg-blue-300 sm:text-sm"
-            // onChange={handleInputChange}
-          />
+          <section className="create-employee-input-zipCode">
+            <label htmlFor="zipCode">Zip Code</label>
+            <input
+              type="text"
+              id="zipCode"
+              autoComplete="off"
+              aria-required="true"
+              // onChange={handleInputChange}
+            />
+          </section>
         </fieldset>
         <fieldset>
           <legend className="legend-hr">HR infos</legend>
-          <label htmlFor="start-date">Start Date</label>
-          <input
-            id="start-date"
-            type="text"
-            className="mt-1 w-full rounded-md bg-green-300 sm:text-sm"
-            // onChange={handleInputChange}
-          />
+          <section className="create-employee-input-start-date">
+            <label htmlFor="start-date">Start Date</label>
+            <input
+              type="date"
+              id="start-date"
+              autoComplete="off"
+              aria-required="true"
+              // onChange={handleInputChange}
+            />
+          </section>
 
-          <Select
-            label="Department"
-            value={selectValue}
-            options={departmentOptions}
-            onChange={handleSelectChange}
-          />
+          <section className="create-employee-input-department">
+            <label htmlFor="department">Department</label>
+            <Select
+              label="Department"
+              value={selectValue}
+              options={departmentOptions}
+              onChange={handleSelectChange}
+            />
+          </section>
         </fieldset>
 
         <button type="submit" className="save-button" onClick={handleSubmit}>

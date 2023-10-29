@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import './Select.css'
+import './Select.css';
 // I use nanoid to generate unique key id for each select option
 
 /**
@@ -16,7 +16,13 @@ const Select = ({ label, value, options, onChange }) => {
     <>
       <label htmlFor={`${label}-select`} className={`${label}-label`}>
         {label}
-        <select id={`${label}-select`} value={value} onChange={onChange}>
+        <select
+          id={`${label}-select`}
+          value={value}
+          onChange={onChange}
+          autoComplete="off"
+          aria-required="true"
+        >
           {options &&
             options.map((option) => (
               <option key={nanoid()} value={option.name}>
