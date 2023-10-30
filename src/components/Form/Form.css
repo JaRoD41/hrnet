@@ -11,8 +11,15 @@
   background-color: white;
 }
 
-#create-employee input {
-  margin-bottom: 0.5rem;
+.create-employee-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.create-employee-input input {
+  border: none;
+  line-height: 2rem;
 }
 
 .create-employee--ico {
@@ -31,6 +38,23 @@ label {
   color: var(--dark);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+}
+
+.legend-personal, .legend-adress, .legend-hr {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--darker);
+  /* position: relative;
+  top: -0.6rem;
+  left: 21rem; */
+}
+
+fieldset {
+  border: none;
+  background-color: #F3F8CF;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
 }

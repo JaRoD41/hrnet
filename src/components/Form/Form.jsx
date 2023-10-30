@@ -98,7 +98,7 @@ const Form = () => {
             />
           </section>
 
-          <section className="create-employee-input">
+          <section className="create-employee-select">
             <Select
               label="State"
               value={selectValue}
@@ -120,8 +120,7 @@ const Form = () => {
             />
           </section>
 
-          <section className="create-employee-input">
-            <label htmlFor="department">Department</label>
+          <section className="create-employee-select">
             <Select
               label="Department"
               value={selectValue}
