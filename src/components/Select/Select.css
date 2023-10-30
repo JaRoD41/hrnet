@@ -4,13 +4,3 @@ select {
     display: flex;
 }
 
-label {
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}

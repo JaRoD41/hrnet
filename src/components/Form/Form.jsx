@@ -28,7 +28,7 @@ const Form = () => {
         />
         <fieldset>
           <legend className="legend-personal">Personal</legend>
-          <section className="create-employee-input-first-name">
+          <section className="create-employee-input">
             <label htmlFor="first-name">First Name</label>
             <input
               type="text"
@@ -39,7 +39,7 @@ const Form = () => {
             />
           </section>
 
-          <section className="create-employee-input-last-name">
+          <section className="create-employee-input">
             <label htmlFor="last-name">Last Name</label>
             <input
               type="text"
@@ -50,7 +50,7 @@ const Form = () => {
             />
           </section>
 
-          <section className="create-employee-input-date-of-birth">
+          <section className="create-employee-input">
             <label htmlFor="date-of-birth">Date of Birth</label>
             <input
               type="date"
@@ -65,7 +65,7 @@ const Form = () => {
         <fieldset>
           <legend className="legend-adress">Address</legend>
 
-          <section className="create-employee-input-street">
+          <section className="create-employee-input">
             <label htmlFor="street">Street</label>
             <input
               type="text"
@@ -76,17 +76,18 @@ const Form = () => {
             />
           </section>
 
-          <section className="create-employee-input-state">
-            <label htmlFor="state">State</label>
-            <Select
-              label="State"
-              value={selectValue}
-              options={stateOptions}
-              onChange={handleSelectChange}
+          <section className="create-employee-input">
+            <label htmlFor="city">City</label>
+            <input
+              type="text"
+              id="city"
+              autoComplete="off"
+              aria-required="true"
+              // onChange={handleInputChange}
             />
           </section>
 
-          <section className="create-employee-input-zipCode">
+          <section className="create-employee-input">
             <label htmlFor="zipCode">Zip Code</label>
             <input
               type="text"
@@ -96,10 +97,19 @@ const Form = () => {
               // onChange={handleInputChange}
             />
           </section>
+
+          <section className="create-employee-input">
+            <Select
+              label="State"
+              value={selectValue}
+              options={stateOptions}
+              onChange={handleSelectChange}
+            />
+          </section>
         </fieldset>
         <fieldset>
           <legend className="legend-hr">HR infos</legend>
-          <section className="create-employee-input-start-date">
+          <section className="create-employee-input">
             <label htmlFor="start-date">Start Date</label>
             <input
               type="date"
@@ -110,7 +120,7 @@ const Form = () => {
             />
           </section>
 
-          <section className="create-employee-input-department">
+          <section className="create-employee-input">
             <label htmlFor="department">Department</label>
             <Select
               label="Department"
