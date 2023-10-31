@@ -1,6 +1,4 @@
-select {
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    display: flex;
+#State-select, #Department-select {
+    border: none;
+    line-height: 2.5rem;
 }
-

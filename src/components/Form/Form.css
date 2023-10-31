@@ -1,20 +1,20 @@
 #create-employee {
   display: flex;
   flex-direction: column;
-  width: 75%;
+  /* width: 75%; */
   max-width: 500px;
   margin: 2rem auto;
   padding: 5%;
-  background: var(--light);
   border-radius: 0.5rem;
-  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px !important;
-  background-color: white;
+  box-shadow: rgba(154, 165, 149, 0.2) 0px 8px 24px;
+  background-color: var(--lighter);
 }
 
-.create-employee-input {
+.create-employee-input, .create-employee-select {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  /* max-width: 212px; */
 }
 
 .create-employee-input input {
@@ -42,7 +42,9 @@ label {
   justify-content: center;
 }
 
-.legend-personal, .legend-adress, .legend-hr {
+.legend-personal,
+.legend-adress,
+.legend-hr {
   font-size: 0.9rem;
   font-weight: bold;
   color: var(--darker);
