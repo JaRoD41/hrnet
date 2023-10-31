@@ -23,6 +23,8 @@
   line-height: 2rem;
   border-radius: 0.5rem;
   padding: 0 1rem;
+  color: var(--darker);
+  font-size: 1rem;
 }
 
 .create-employee--ico {
@@ -62,6 +64,7 @@ fieldset {
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
+  box-shadow: rgba(154, 165, 149, 0.2) 0px 8px 24px;
 }
 
 .save-button {

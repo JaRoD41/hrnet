@@ -19,6 +19,7 @@ const Select = ({ label, name, options }) => {
         <select
           id={`${label}-select`}
           name={name}
+          className={`${label}-select`}
           autoComplete="off"
           aria-required="true"
         >
