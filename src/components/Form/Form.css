@@ -10,16 +10,19 @@
   background-color: var(--lighter);
 }
 
-.create-employee-input, .create-employee-select {
+.create-employee-input,
+.create-employee-select {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  /* max-width: 212px; */
+  width: 100%;
 }
 
 .create-employee-input input {
   border: none;
   line-height: 2rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
 }
 
 .create-employee--ico {
@@ -31,7 +34,7 @@
 }
 
 label {
-  margin-right: 0.5rem;
+  /* margin-right: 0.5rem; */
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
@@ -59,4 +62,17 @@ fieldset {
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.save-button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--dark);
+  color: var(--light);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
 }
