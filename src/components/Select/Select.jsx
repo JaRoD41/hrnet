@@ -11,15 +11,14 @@ import './Select.css';
  * @param {function} onChange - The function to be called when the select input field value changes.
  * @return {JSX.Element} - The JSX element representing the select input field.
  */
-const Select = ({ label, value, options, onChange }) => {
+const Select = ({ label, name, options }) => {
   return (
     <>
       <label htmlFor={`${label}-select`} className={`${label}-label`}>
         {label}
         <select
           id={`${label}-select`}
-          value={value}
-          onChange={onChange}
+          name={name}
           autoComplete="off"
           aria-required="true"
         >

@@ -12,15 +12,20 @@ const Form = () => {
     setSelectValue(e.target.value);
   };
 
-  // const modalBtn = document.querySelector('.save-button');
   const handleSubmit = (e) => {
     e.preventDefault();
-    // modalBtn.click();
-    console.log('formulaire soumis avec succes : ', selectValue);
+    const stateValue = e.currentTarget.state.value;
+    const departmentValue = e.currentTarget.department.value;
+    console.log(
+      'formulaire soumis avec succes : ',
+      selectValue,
+      stateValue,
+      departmentValue,
+    );
   };
   return (
     <>
-      <form action="#" id="create-employee">
+      <form action="#" id="create-employee" onSubmit={handleSubmit}>
         <img
           className="create-employee--ico"
           src={addUser}
@@ -101,9 +106,9 @@ const Form = () => {
           <section className="create-employee-select">
             <Select
               label="State"
-              value={selectValue}
+              name="state"
               options={stateOptions}
-              onChange={handleSelectChange}
+              // onChange={handleSelectChange}
             />
           </section>
         </fieldset>
@@ -123,14 +128,14 @@ const Form = () => {
           <section className="create-employee-select">
             <Select
               label="Department"
-              value={selectValue}
+              name="department"
               options={departmentOptions}
-              onChange={handleSelectChange}
+              // onChange={handleSelectChange}
             />
           </section>
         </fieldset>
 
-        <button type="submit" className="save-button" onClick={handleSubmit}>
+        <button type="submit" className="save-button">
           Save
         </button>
       </form>
