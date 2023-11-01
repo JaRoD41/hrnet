@@ -31,7 +31,7 @@ const Form = () => {
           src={addUser}
           alt="create employee icon"
         />
-        <fieldset>
+        <fieldset name='personal' form='create-employee'>
           <legend className="legend-personal">Personal</legend>
           <section className="create-employee-input">
             <label htmlFor="first-name">First Name</label>
@@ -67,7 +67,7 @@ const Form = () => {
           </section>
         </fieldset>
 
-        <fieldset>
+        <fieldset name='adress' form='create-employee'>
           <legend className="legend-adress">Address</legend>
 
           <section className="create-employee-input">
@@ -112,7 +112,7 @@ const Form = () => {
             />
           </section>
         </fieldset>
-        <fieldset>
+        <fieldset name='hr' form='create-employee'>
           <legend className="legend-hr">HR infos</legend>
           <section className="create-employee-input">
             <label htmlFor="start-date">Start Date</label>
