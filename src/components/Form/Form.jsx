@@ -2,15 +2,15 @@ import './Form.css';
 import Select from '../Select/Select';
 import departments from '../../data/departments';
 import states from '../../data/states';
-import { useState } from 'react';
+// import { useState } from 'react';
 import addUser from '../../assets/users-add.svg';
 const Form = () => {
   const departmentOptions = departments;
   const stateOptions = states;
-  const [selectValue, setSelectValue] = useState('');
-  const handleSelectChange = (e) => {
-    setSelectValue(e.target.value);
-  };
+  // const [selectValue, setSelectValue] = useState('');
+  // const handleSelectChange = (e) => {
+  //   setSelectValue(e.target.value);
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +18,7 @@ const Form = () => {
     const departmentValue = e.currentTarget.department.value;
     console.log(
       'formulaire soumis avec succes : ',
-      selectValue,
+      // selectValue,
       stateValue,
       departmentValue,
     );
