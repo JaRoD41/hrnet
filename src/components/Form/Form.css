@@ -1,7 +1,6 @@
 #create-employee {
   display: flex;
   flex-direction: column;
-  /* width: 75%; */
   max-width: 500px;
   margin: 2rem auto;
   padding: 5%;
@@ -36,7 +35,6 @@
 }
 
 label {
-  /* margin-right: 0.5rem; */
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
@@ -53,9 +51,6 @@ label {
   font-size: 0.9rem;
   font-weight: bold;
   color: var(--darker);
-  /* position: relative;
-  top: -0.6rem;
-  left: 21rem; */
 }
 
 fieldset {
