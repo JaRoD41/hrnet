@@ -8,9 +8,7 @@ const Header = () => {
           <p>WealthHealth</p>
         </div>
         <nav aria-label="main navigation" className="nav-links">
-          <Link to="/" className="nav-link">
-            Add
-          </Link>
+          
           <Link to="/employees" className="nav-link">
             Employees List
           </Link>
