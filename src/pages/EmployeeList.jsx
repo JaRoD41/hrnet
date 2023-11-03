@@ -2,8 +2,6 @@ import { useNavigate, Link } from 'react-router-dom';
 import { ReactTabulator } from 'react-tabulator';
 import '/node_modules/tabulator-tables/dist/css/tabulator.min.css';
 
-
-
 const EmployeeList = () => {
   const navigate = useNavigate();
   const columns = [
@@ -45,7 +43,6 @@ const EmployeeList = () => {
       dob: '31/01/1999',
     },
   ];
-
 
   return (
     <>
