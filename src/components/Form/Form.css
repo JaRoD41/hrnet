@@ -34,7 +34,7 @@
   margin-bottom: 2rem;
 }
 
-label {
+.create-employee-input label {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
@@ -51,6 +51,8 @@ label {
   font-size: 0.9rem;
   font-weight: bold;
   color: var(--darker);
+  position: relative;
+  left: 82%;
 }
 
 fieldset {
