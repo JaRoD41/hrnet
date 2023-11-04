@@ -1,4 +1,4 @@
-const mockEmployees = [
+const mockEmployeeList = [
   {
     firstName: "John",
     lastName: "Doe",
@@ -34,4 +34,4 @@ const mockEmployees = [
   }
 ]
 
-export default mockEmployees;
+export default mockEmployeeList;

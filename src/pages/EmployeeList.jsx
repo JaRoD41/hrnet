@@ -1,55 +1,89 @@
 import { useNavigate, Link } from 'react-router-dom';
 import { ReactTabulator } from 'react-tabulator';
 import '/node_modules/tabulator-tables/dist/css/tabulator.min.css';
+import mockEmployeeList from '../data/mock';
 
 const EmployeeList = () => {
   const navigate = useNavigate();
   const columns = [
-    { title: 'Name', field: 'name', width: 150 },
-    { title: 'Age', field: 'age', hozAlign: 'left', formatter: 'progress' },
-    { title: 'Favourite Color', field: 'col' },
-    { title: 'Date Of Birth', field: 'dob', hozAlign: 'center' },
-    { title: 'Rating', field: 'rating', hozAlign: 'center', formatter: 'star' },
     {
-      title: 'Passed?',
-      field: 'passed',
+      title: 'First Name',
+      field: 'firstName',
+      hozAlign: 'left',
+      // width: 150,
+      responsive: 0,
+    },
+    {
+      title: 'Last Name',
+      field: 'lastName',
+      hozAlign: 'left',
+      // width: 150,
+      responsive: 0,
+    },
+    {
+      title: 'Birth Date',
+      field: 'dateOfBirth',
       hozAlign: 'center',
-      formatter: 'tickCross',
+      // width: 150,
+    },
+    {
+      title: 'Street',
+      field: 'street',
+      hozAlign: 'center',
+      // width: 150,
+      responsive: 2,
+    },
+    {
+      title: 'City',
+      field: 'city',
+      hozAlign: 'center',
+      // width: 150,
+      responsive: 0,
+    },
+    {
+      title: 'State',
+      field: 'state',
+      hozAlign: 'left',
+      // width: 150,
+      responsive: 2,
+    },
+    {
+      title: 'Zip Code',
+      field: 'zipCode',
+      hozAlign: 'center',
+      // width: 150,
+      responsive: 2,
+    },
+    {
+      title: 'Start Date',
+      field: 'startDate',
+      hozAlign: 'center',
+      // width: 150,
+      responsive: 1,
+    },
+    {
+      title: 'Department',
+      field: 'department',
+      hozAlign: 'center',
+      // width: 150,
+      responsive: 0,
     },
   ];
 
-  var data = [
-    { id: 1, name: 'Oli Bob', age: '12', col: 'red', dob: '' },
-    { id: 2, name: 'Mary May', age: '1', col: 'blue', dob: '14/05/1982' },
-    {
-      id: 3,
-      name: 'Christine Lobowski',
-      age: '42',
-      col: 'green',
-      dob: '22/05/1982',
-    },
-    {
-      id: 4,
-      name: 'Brendon Philips',
-      age: '125',
-      col: 'orange',
-      dob: '01/08/1980',
-    },
-    {
-      id: 5,
-      name: 'Margret Marmajuke',
-      age: '16',
-      col: 'yellow',
-      dob: '31/01/1999',
-    },
-  ];
+  const employeeData = mockEmployeeList;
 
   return (
     <>
       <h1>EmployeeList</h1>
       <button onClick={() => navigate('/')}>Create Employee</button>
 
-      <ReactTabulator data={data} columns={columns} layout={'fitData'} />
+      <ReactTabulator
+        data={employeeData}
+        columns={columns}
+        layout={'fitColumns'}
+        layoutColumnsOnNewData={true}
+        responsiveLayout={'hide'}
+      />
       <div className="link-create-employee">
         <Link to="/">-Employee registration form-</Link>
       </div>
