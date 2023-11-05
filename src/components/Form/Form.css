@@ -2,11 +2,16 @@
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  margin: 2rem auto;
+  margin: auto;
   padding: 5%;
   border-radius: 0.5rem;
   box-shadow: rgba(154, 165, 149, 0.2) 0px 8px 24px;
   background-color: var(--lighter);
+}
+
+#page-role {
+  width: fit-content;
+  margin: auto;
 }
 
 .create-employee-input,
@@ -31,7 +36,7 @@
   height: 2.5rem;
   display: block;
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .create-employee-input label {

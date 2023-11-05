@@ -8,14 +8,11 @@ import Modal from '../components/Modal/Modal';
 const CreateEmployee = () => {
   // const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <>
       <Header />
       <main>
-        <h2 id="page-role">
-          Create an employee
-        </h2>
         <Form />
         {/* Modal */}
         {/* <button onClick={toggleModal}>Save</button> */}

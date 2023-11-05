@@ -26,12 +26,16 @@ const Form = () => {
   return (
     <>
       <form action="#" id="create-employee" onSubmit={handleSubmit}>
-        <img
-          className="create-employee--ico"
-          src={addUser}
-          alt="create employee icon"
-        />
-        <fieldset name='personal' form='create-employee'>
+        <section className="form-header">
+          <h2 id="page-role">Create an employee</h2>
+          <img
+            className="create-employee--ico"
+            src={addUser}
+            alt="create employee icon"
+          />
+        </section>
+
+        <fieldset name="personal" form="create-employee">
           <legend className="legend-personal">Personal</legend>
           <section className="create-employee-input">
             <label htmlFor="first-name">First Name</label>
@@ -67,7 +71,7 @@ const Form = () => {
           </section>
         </fieldset>
 
-        <fieldset name='adress' form='create-employee'>
+        <fieldset name="adress" form="create-employee">
           <legend className="legend-adress">Address</legend>
 
           <section className="create-employee-input">
@@ -112,7 +116,7 @@ const Form = () => {
             />
           </section>
         </fieldset>
-        <fieldset name='hr' form='create-employee'>
+        <fieldset name="hr" form="create-employee">
           <legend className="legend-hr">HR infos</legend>
           <section className="create-employee-input">
             <label htmlFor="start-date">Start Date</label>

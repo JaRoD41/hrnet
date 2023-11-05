@@ -49,11 +49,6 @@ body {
   color: var(--cod-gray);
 }
 
-#page-role {
-  width: fit-content;
-  margin: 2rem auto;
-}
-
 /* TABULATOR */
 
 .tabulator {
