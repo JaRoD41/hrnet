@@ -53,3 +53,28 @@ body {
   width: fit-content;
   margin: 2rem auto;
 }
+
+/* change the alternate colors for even and odd rows */
+.tabulator .tabulator-row.tabulator-row-even {
+  background-color: #f3f8cf !important;
+  /* color: #fafce9; */
+}
+
+.tabulator .tabulator-row.tabulator-row-odd {
+  background-color: #D4E571 !important;
+}
+
+/* .tabulator-row.tabulator-selected .tabulator-cell {
+  background-color: rgba(247, 101, 213, 0.8) !important;
+} */
+
+/* .tabulator-row:hover {
+  background-color: rgb(0, 0, 0) !important;
+  color: rgb(0, 119, 255) !important;
+  font-weight: 900;
+} */
+
+.tabulator .tabulator-row.tabulator-selectable:hover .tabulator-cell {
+  background-color: #708618 !important;
+  color: #fafce9
+}
