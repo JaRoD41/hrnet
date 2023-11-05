@@ -54,6 +54,14 @@ body {
   margin: 2rem auto;
 }
 
+/* TABULATOR */
+
+.tabulator {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  margin-top: 15rem;
+}
+
 /* change the alternate colors for even and odd rows */
 .tabulator .tabulator-row.tabulator-row-even {
   background-color: #f3f8cf !important;
