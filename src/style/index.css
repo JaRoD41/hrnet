@@ -57,24 +57,62 @@ body {
 /* change the alternate colors for even and odd rows */
 .tabulator .tabulator-row.tabulator-row-even {
   background-color: #f3f8cf !important;
-  /* color: #fafce9; */
 }
 
 .tabulator .tabulator-row.tabulator-row-odd {
   background-color: #D4E571 !important;
 }
 
-/* .tabulator-row.tabulator-selected .tabulator-cell {
-  background-color: rgba(247, 101, 213, 0.8) !important;
-} */
-
-/* .tabulator-row:hover {
-  background-color: rgb(0, 0, 0) !important;
-  color: rgb(0, 119, 255) !important;
-  font-weight: 900;
-} */
-
 .tabulator .tabulator-row.tabulator-selectable:hover .tabulator-cell {
-  background-color: #708618 !important;
+  background-color: #5F7219 !important;
   color: #fafce9
+}
+
+.tabulator .tabulator-header .tabulator-col,
+.tabulator .tabulator-footer {
+  background-color: #a1bb27 !important;
+  color: #212a09;
+}
+
+/* column header arrows */
+
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort="none"] .tabulator-col-content .tabulator-col-sorter .tabulator-arrow {
+  border-top: none;
+  border-bottom: 6px solid green;
+}
+
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort="ascending"] .tabulator-col-content .tabulator-col-sorter .tabulator-arrow {
+  border-top: none;
+  border-bottom: 6px solid blue;
+}
+
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort="descending"] .tabulator-col-content .tabulator-col-sorter .tabulator-arrow {
+  border-top: 6px solid orange;
+  border-bottom: none;
+}
+
+.tabulator .tabulator-footer .tabulator-page-counter {
+  color: #212a09;
+  font-weight: 700;
+}
+
+.tabulator .tabulator-footer .tabulator-paginator {
+  color: #212a09;
+}
+
+.tabulator .tabulator-footer .tabulator-page {
+  background: #e6F1A5;
+}
+
+/* .tabulator .tabulator-footer .tabulator-page button:disabled {
+  color: red;
+} */
+
+.tabulator .tabulator-footer .tabulator-page.active {
+  color: blue;
+}
+
+.tabulator .tabulator-footer .tabulator-page:disabled {
+  opacity: 0.9;
+  color: #212A09;
 }
