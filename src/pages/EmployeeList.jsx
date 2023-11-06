@@ -1,24 +1,21 @@
-import { useNavigate, Link } from 'react-router-dom';
-// import { ReactTabulator, Pagination } from 'react-tabulator';
-// import { PageModule } from 'react-tabulator';
-// import '/node_modules/tabulator-tables/dist/css/tabulator.min.css';
+// import { useNavigate, Link } from 'react-router-dom';
+import Header from '../components/Header/Header';
 import Table from '../components/Table/Table';
 import mockEmployeeList from '../data/mock';
 
 const EmployeeList = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // const employeeData = mockEmployeeList;
 
   return (
     <>
-      <h1>EmployeeList</h1>
-      <button onClick={() => navigate('/')}>Create Employee</button>
+      <Header page='list'/>
+      {/* <h1>EmployeeList</h1>
+      <button onClick={() => navigate('/')}>Create Employee</button> */}
 
       <Table data={mockEmployeeList} />
-      <div className="link-create-employee">
-        <Link to="/">-Employee registration form-</Link>
-      </div>
+      
     </>
   );
 };

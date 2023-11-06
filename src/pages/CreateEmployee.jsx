@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useState } from 'react';
 // import {useNavigate} from 'react-router-dom';
 import Header from '../components/Header/Header';
@@ -11,16 +11,16 @@ const CreateEmployee = () => {
 
   return (
     <>
-      <Header />
+      <Header page='create'/>
       <main>
         <Form />
         {/* Modal */}
         {/* <button onClick={toggleModal}>Save</button> */}
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}></Modal>
       </main>
-      <div className="link-employee-list">
+      {/* <div className="link-employee-list">
         <Link to="/employees">-Employees Table-</Link>
-      </div>
+      </div> */}
     </>
   );
 };

@@ -1,5 +1,7 @@
 header {
-    margin: 1rem auto;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,7 +35,7 @@ header {
     margin-left: 1rem;
 }
 
-.employee-list--ico {
+.employee-list--ico, .add-employee--ico {
     display: flex;
     align-items: center;
     justify-content: center;

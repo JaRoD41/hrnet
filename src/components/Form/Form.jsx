@@ -28,11 +28,11 @@ const Form = () => {
       <form action="#" id="create-employee" onSubmit={handleSubmit}>
         <section className="form-header">
           <h2 id="page-role">Create an employee</h2>
-          <img
+          {/* <img
             className="create-employee--ico"
             src={addUser}
             alt="create employee icon"
-          />
+          /> */}
         </section>
 
         <fieldset name="personal" form="create-employee">

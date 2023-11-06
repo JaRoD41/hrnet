@@ -3,7 +3,7 @@
   flex-direction: column;
   max-width: 500px;
   margin: auto;
-  padding: 5%;
+  padding: 2% 5% 3% 5%;
   border-radius: 0.5rem;
   box-shadow: rgba(154, 165, 149, 0.2) 0px 8px 24px;
   background-color: var(--lighter);
@@ -11,8 +11,16 @@
 
 #page-role {
   width: fit-content;
-  margin: auto;
+  margin: 1rem auto;
   color: var(--darker);
+  font-size: 1.5rem;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2%;
 }
 
 .create-employee-input,
