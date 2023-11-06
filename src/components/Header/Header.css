@@ -31,6 +31,7 @@ header {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.336);
+    margin-left: 1rem;
 }
 
 .employee-list--ico {
@@ -41,4 +42,8 @@ header {
     height: 2.5rem;
     display: block;
     margin: 0 auto;
+}
+
+.nav-links {
+    margin-right: 1rem;
 }
