@@ -12,6 +12,7 @@
 #page-role {
   width: fit-content;
   margin: auto;
+  color: var(--darker);
 }
 
 .create-employee-input,
@@ -35,8 +36,7 @@
   width: 2.5rem;
   height: 2.5rem;
   display: block;
-  margin: 0 auto;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
 }
 
 .create-employee-input label {
