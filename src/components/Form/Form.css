@@ -1,0 +1,91 @@
+#create-employee {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  padding: 2% 5% 3% 5%;
+  border-radius: 0.5rem;
+  box-shadow: rgba(154, 165, 149, 0.2) 0px 8px 24px;
+  background-color: var(--lighter);
+}
+
+#page-role {
+  width: fit-content;
+  margin: 1rem auto;
+  color: var(--darker);
+  font-size: 1.5rem;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.create-employee-input,
+.create-employee-select {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.create-employee-input input {
+  border: none;
+  line-height: 2rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  color: var(--darker);
+  font-size: 1rem;
+}
+
+.create-employee--ico {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  margin: 1rem auto;
+}
+
+.create-employee-input label {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.legend-personal,
+.legend-adress,
+.legend-hr {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--darker);
+  position: relative;
+  left: 82%;
+}
+
+fieldset {
+  border: none;
+  background-color: #F3F8CF;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(154, 165, 149, 0.2) 0px 8px 24px;
+}
+
+.save-button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--dark);
+  color: var(--light);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
