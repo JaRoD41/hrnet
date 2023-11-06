@@ -8,66 +8,75 @@ const Table = ({ data }) => {
   const [size, setSize] = useState(10);
   const columns = [
     {
+      formatter: 'responsiveCollapse',
+      width: 30,
+      minWidth: 30,
+      hozAlign: 'center',
+      resizable: false,
+      headerSort: false,
+    },
+    {
       title: 'First Name',
       field: 'firstName',
       hozAlign: 'left',
-      // width: 150,
+      width: 100,
       responsive: 0,
     },
     {
       title: 'Last Name',
       field: 'lastName',
       hozAlign: 'left',
-      // width: 150,
+      width: 100,
       responsive: 0,
     },
     {
       title: 'Birth Date',
       field: 'dateOfBirth',
       hozAlign: 'center',
-      // width: 150,
+      // width: 100,
+      responsive: 2,
     },
     {
       title: 'Street',
       field: 'street',
       hozAlign: 'left',
-      // width: 150,
+      width: 275,
       responsive: 2,
     },
     {
       title: 'City',
       field: 'city',
       hozAlign: 'center',
-      // width: 150,
-      responsive: 0,
+      // width: 163,
+      responsive: 2,
     },
     {
       title: 'State',
       field: 'state',
       hozAlign: 'center',
-      // width: 150,
+      // width: 75,
       responsive: 2,
     },
     {
       title: 'Zip Code',
       field: 'zipCode',
       hozAlign: 'center',
-      // width: 150,
+      width: 75,
       responsive: 2,
     },
     {
       title: 'Start Date',
       field: 'startDate',
       hozAlign: 'center',
-      // width: 150,
-      responsive: 1,
+      width: 125,
+      responsive: 2,
     },
     {
       title: 'Department',
       field: 'department',
       hozAlign: 'center',
-      // width: 150,
-      responsive: 0,
+      // width: 200,
+      responsive: 2,
     },
   ];
 
@@ -86,15 +95,14 @@ const Table = ({ data }) => {
         columns={columns}
         options={{
           layout: 'fitColumns',
+          responsiveLayout: 'collapse',
           pagination: 'local',
-          paginationSize: 6,
-          paginationSizeSelector: [3, 6, 8, 10],
-          movableColumns: true,
+          paginationSize: 15,
           paginationCounter: 'rows',
         }}
-        paginationSize={size}
-        paginationSizeSelector={[3, 6, 8, 10]}
-        paginationCounter={'rows'}
+        // paginationSize={size}
+        // paginationSizeSelector={[3, 6, 8, 10]}
+        // paginationCounter={'rows'}
         page={page}
         size={size}
         total={data.length}
@@ -107,11 +115,3 @@ const Table = ({ data }) => {
 
 export default Table;
 
-// paginationSize:6
-// paginationSizeSelector:[3, 6, 8, 10]
-// paginationCounter={'rows'}
-// page={page}
-// size={size}
-// total={data.length}
-// onPageChange={handlePageChange}
-// onSizeChange={handleSizeChange}
