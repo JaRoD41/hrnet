@@ -10,12 +10,12 @@ const EmployeeList = () => {
 
   return (
     <>
-      <Header page='list'/>
-      {/* <h1>EmployeeList</h1>
-      <button onClick={() => navigate('/')}>Create Employee</button> */}
+      <Header page="list" />
+      <section className="table-header">
+        <h2 id="page-role">Actual Employees List</h2>
+      </section>
 
       <Table data={mockEmployeeList} />
-      
     </>
   );
 };

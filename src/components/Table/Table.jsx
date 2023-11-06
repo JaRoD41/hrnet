@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '/node_modules/tabulator-tables/dist/css/tabulator.min.css';
 import { ReactTabulator } from 'react-tabulator';
+import './Table.css';
 
 const Table = ({ data }) => {
   const [page, setPage] = useState(1);

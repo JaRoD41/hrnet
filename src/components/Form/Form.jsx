@@ -3,7 +3,7 @@ import Select from '../Select/Select';
 import departments from '../../data/departments';
 import states from '../../data/states';
 // import { useState } from 'react';
-import addUser from '../../assets/users-add.svg';
+// import addUser from '../../assets/users-add.svg';
 const Form = () => {
   const departmentOptions = departments;
   const stateOptions = states;
@@ -28,11 +28,6 @@ const Form = () => {
       <form action="#" id="create-employee" onSubmit={handleSubmit}>
         <section className="form-header">
           <h2 id="page-role">Create an employee</h2>
-          {/* <img
-            className="create-employee--ico"
-            src={addUser}
-            alt="create employee icon"
-          /> */}
         </section>
 
         <fieldset name="personal" form="create-employee">
