@@ -65,6 +65,7 @@ header {
     font-weight: bold;
     color: var(--dark);
     margin-left: 0.7rem;
+    margin-bottom: 0.3rem;
 }
 
 .brand-logo {
