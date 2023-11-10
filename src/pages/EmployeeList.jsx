@@ -1,13 +1,10 @@
-// import { useNavigate, Link } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import Table from '../components/Table/Table';
-import mockEmployeeList from '../data/mock';
+import { useEmployees } from '../utils/customHook';
 
 const EmployeeList = () => {
-  // const navigate = useNavigate();
-
-  // const employeeData = mockEmployeeList;
-
+  const { employeeList } = useEmployees();
+  console.log('employeeList dans la page du tableau :', employeeList);
   return (
     <>
       <Header page="list" />
@@ -15,7 +12,8 @@ const EmployeeList = () => {
         <h2 id="page-role">Actual Employee List</h2>
       </section>
 
-      <Table data={mockEmployeeList} />
+      {/* <Table data={employeeList} /> */}
+      <Table />
     </>
   );
 };

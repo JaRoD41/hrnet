@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '/node_modules/tabulator-tables/dist/css/tabulator.min.css';
 import { ReactTabulator } from 'react-tabulator';
 import './Table.css';
+import { useEmployees } from '../../utils/customHook';
 
-const Table = ({ data }) => {
+const Table = () => {
   const [page, setPage] = useState(1);
   const [size, setSize] = useState(10);
+  const { employeeList } = useEmployees();
   const columns = [
     {
       formatter: 'responsiveCollapse',
@@ -33,7 +35,6 @@ const Table = ({ data }) => {
       title: 'Birth Date',
       field: 'dateOfBirth',
       hozAlign: 'center',
-      // width: 100,
       responsive: 2,
     },
     {
@@ -47,14 +48,12 @@ const Table = ({ data }) => {
       title: 'City',
       field: 'city',
       hozAlign: 'center',
-      // width: 163,
       responsive: 2,
     },
     {
       title: 'State',
       field: 'state',
       hozAlign: 'center',
-      // width: 75,
       responsive: 2,
     },
     {
@@ -75,7 +74,6 @@ const Table = ({ data }) => {
       title: 'Department',
       field: 'department',
       hozAlign: 'center',
-      // width: 200,
       responsive: 2,
     },
   ];
@@ -88,10 +86,13 @@ const Table = ({ data }) => {
     setSize(size);
   };
 
+  useEffect(() => {
+    console.log('employeeList a changé :', employeeList);
+  }, [employeeList]);
   return (
     <>
       <ReactTabulator
-        data={data}
+        data={employeeList}
         columns={columns}
         options={{
           layout: 'fitColumns',
@@ -100,12 +101,9 @@ const Table = ({ data }) => {
           paginationSize: 15,
           paginationCounter: 'rows',
         }}
-        // paginationSize={size}
-        // paginationSizeSelector={[3, 6, 8, 10]}
-        // paginationCounter={'rows'}
         page={page}
         size={size}
-        total={data.length}
+        total={employeeList.length}
         onPageChange={handlePageChange}
         onSizeChange={handleSizeChange}
       />
@@ -114,4 +112,3 @@ const Table = ({ data }) => {
 };
 
 export default Table;
-

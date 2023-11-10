@@ -2,26 +2,29 @@ import './Form.css';
 import Select from '../Select/Select';
 import departments from '../../data/departments';
 import states from '../../data/states';
-// import { useState } from 'react';
-// import addUser from '../../assets/users-add.svg';
+import { useEmployees } from '../../utils/customHook';
+
+// export const FormContext = createContext();
 const Form = () => {
   const departmentOptions = departments;
   const stateOptions = states;
-  // const [selectValue, setSelectValue] = useState('');
-  // const handleSelectChange = (e) => {
-  //   setSelectValue(e.target.value);
-  // };
+  const { addEmployee } = useEmployees();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const stateValue = e.currentTarget.state.value;
-    const departmentValue = e.currentTarget.department.value;
-    console.log(
-      'formulaire soumis avec succes : ',
-      // selectValue,
-      stateValue,
-      departmentValue,
-    );
+    const newEmployee = {
+      firstName: e.currentTarget.firstName.value,
+      lastName: e.currentTarget.lastName.value,
+      dateOfBirth: e.currentTarget.dateOfBirth.value,
+      street: e.currentTarget.street.value,
+      city: e.currentTarget.city.value,
+      zipCode: e.currentTarget.zipCode.value,
+      state: e.currentTarget.state.value,
+      startDate: e.currentTarget.startDate.value,
+      department: e.currentTarget.department.value,
+    };
+
+    addEmployee(newEmployee);
   };
   return (
     <>
@@ -37,6 +40,7 @@ const Form = () => {
             <input
               type="text"
               id="first-name"
+              name="firstName"
               autoComplete="off"
               aria-required="true"
               // onChange={handleInputChange}
@@ -48,6 +52,7 @@ const Form = () => {
             <input
               type="text"
               id="last-name"
+              name="lastName"
               autoComplete="off"
               aria-required="true"
               // onChange={handleInputChange}
@@ -59,6 +64,7 @@ const Form = () => {
             <input
               type="date"
               id="date-of-birth"
+              name="dateOfBirth"
               autoComplete="off"
               aria-required="true"
               // onChange={handleInputChange}
@@ -74,6 +80,7 @@ const Form = () => {
             <input
               type="text"
               id="street"
+              name="street"
               autoComplete="off"
               aria-required="true"
               // onChange={handleInputChange}
@@ -85,6 +92,7 @@ const Form = () => {
             <input
               type="text"
               id="city"
+              name="city"
               autoComplete="off"
               aria-required="true"
               // onChange={handleInputChange}
@@ -96,6 +104,7 @@ const Form = () => {
             <input
               type="text"
               id="zipCode"
+              name="zipCode"
               autoComplete="off"
               aria-required="true"
               // onChange={handleInputChange}
@@ -118,6 +127,7 @@ const Form = () => {
             <input
               type="date"
               id="start-date"
+              name="startDate"
               autoComplete="off"
               aria-required="true"
               // onChange={handleInputChange}
