@@ -16,7 +16,7 @@ const EmployeeDTO = (data) => {
 };
 
 export const useEmployees = () => {
-  const [employeeList, setEmployeeList] = useState([...mockEmployeeList]);
+  const [employeeList, setEmployeeList] = useState(mockEmployeeList);
 
   const addEmployee = (employee) => {
     const newList = [...employeeList, EmployeeDTO(employee)];
