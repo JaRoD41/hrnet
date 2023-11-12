@@ -11,7 +11,7 @@ const EmployeeList = () => {
     <>
       <Header page="list" />
       <section className="table-header">
-        <h2 id="page-role">Actual Employee List</h2>
+        <h2 id="page-role">Current Employees</h2>
       </section>
       <Table />
     </>
