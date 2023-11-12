@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import '/node_modules/tabulator-tables/dist/css/tabulator.min.css';
 import { ReactTabulator } from 'react-tabulator';
 import './Table.css';
-import { useEmployees } from '../../utils/customHook';
+import { useEmployees } from '../../utils/useEmployees';
+// import { EmployeeContext } from '../../context/EmployeeContext';
 
 const Table = () => {
   const [page, setPage] = useState(1);
@@ -86,9 +87,6 @@ const Table = () => {
     setSize(size);
   };
 
-  useEffect(() => {
-    console.log('employeeList a changé :', employeeList);
-  }, [employeeList]);
   return (
     <>
       <ReactTabulator

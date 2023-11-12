@@ -1,30 +1,28 @@
 // import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { EmployeeContext } from '../context/EmployeeContext';
+// import { EmployeeContext } from '../context/EmployeeContext';
 import Header from '../components/Header/Header';
 import Form from '../components/Form/Form';
 import Modal from '../components/Modal/Modal';
 
 const CreateEmployee = () => {
-  
   // const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
+  
 
   return (
     <>
-      <Header page='create'/>
+      <Header page="create" />
       <main>
         <Form />
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}></Modal>
       </main>
-      
     </>
   );
 };
 
 export default CreateEmployee;
-
 
 // import React from 'react';
 // import { EmployeeContext } from '../context/EmployeeContext';

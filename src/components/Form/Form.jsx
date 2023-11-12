@@ -2,9 +2,8 @@ import './Form.css';
 import Select from '../Select/Select';
 import departments from '../../data/departments';
 import states from '../../data/states';
-import { useEmployees } from '../../utils/customHook';
+import { useEmployees } from '../../utils/useEmployees';
 
-// export const FormContext = createContext();
 const Form = () => {
   const departmentOptions = departments;
   const stateOptions = states;
@@ -23,8 +22,14 @@ const Form = () => {
       startDate: e.currentTarget.startDate.value,
       department: e.currentTarget.department.value,
     };
-
+    const shortState = handleStateSelection(newEmployee.state);
+    newEmployee.state = shortState;
     addEmployee(newEmployee);
+  };
+
+  const handleStateSelection = (choice) => {
+    const selectedState = stateOptions.find((state) => state.name === choice);
+    return selectedState ? selectedState.abbreviation : '';
   };
   return (
     <>
@@ -116,7 +121,7 @@ const Form = () => {
               label="State"
               name="state"
               options={stateOptions}
-              // onChange={handleSelectChange}
+              onChange={handleStateSelection}
             />
           </section>
         </fieldset>
