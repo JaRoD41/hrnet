@@ -3,7 +3,6 @@ import '/node_modules/tabulator-tables/dist/css/tabulator.min.css';
 import { ReactTabulator } from 'react-tabulator';
 import './Table.css';
 import { useEmployees } from '../../utils/useEmployees';
-// import { EmployeeContext } from '../../context/EmployeeContext';
 
 const Table = () => {
   const [page, setPage] = useState(1);
@@ -96,8 +95,21 @@ const Table = () => {
           layout: 'fitColumns',
           responsiveLayout: 'collapse',
           pagination: 'local',
-          paginationSize: 15,
+          paginationSize: 10,
+          paginationSizeSelector: [10, 25, 50, 100],
           paginationCounter: 'rows',
+          langs: {
+            default: {
+              pagination: {
+                counter: {
+                  showing: 'Showing',
+                  of: 'of',
+                  rows: 'entries',
+                  pages: 'pages',
+                },
+              },
+            },
+          },
         }}
         page={page}
         size={size}

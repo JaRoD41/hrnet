@@ -64,9 +64,9 @@
     background: #e6F1A5;
 }
 
-/* .tabulator .tabulator-footer .tabulator-page button:disabled {
-  color: red;
-} */
+.tabulator .tabulator-footer .tabulator-footer-contents {
+    align-items: baseline;
+}
 
 .tabulator .tabulator-footer .tabulator-page.active {
     color: blue;
