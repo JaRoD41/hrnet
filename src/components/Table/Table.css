@@ -76,3 +76,30 @@
     opacity: 0.9;
     color: #212A09;
 }
+
+/* SEARCH INPUT STYLE */
+
+.searchBar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 2rem 1rem;
+}
+
+.searchBar-container img {
+    display: flex;
+    width: 1.2rem;
+    margin-left: 0.8rem;
+}
+
+#searchBar {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    border: none;
+    height: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding-right: 3em;
+    padding-left: 0.8em;
+    color: var(--darker)
+}
