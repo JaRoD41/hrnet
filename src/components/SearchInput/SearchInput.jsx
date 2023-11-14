@@ -1,32 +1,27 @@
-import { useState, useEffect } from 'react';
+// import { useEffect } from 'react';
 import searchIcon from '../../assets/search-icon.svg';
 import { useEmployees } from '../../utils/useEmployees';
 
 const SearchInput = () => {
-  // Get the employee list
-  const { employeeList } = useEmployees();
-
-  // I create a state to store the search value
-  const [searchValue, setSearchValue] = useState('');
-
-  // I create a state to store the filtered results
-  const [filteredResults, setFilteredResults] = useState([]);
+  // Get the employee list, addEmployee function, searchEmployee function and searchValue
+  const { employeeList, addEmployee, searchEmployee, searchValue } =
+    useEmployees();
 
   const handleSearchChange = (event) => {
-    setSearchValue(event.target.value);
+    searchEmployee(event.target.value);
   };
 
-  useEffect(() => {
-    const filteredList = employeeList.filter((employee) => {
-      if (employee) {
-        return employee.firstName.includes(searchValue);
-      }
-      return false;
-    });
-    setFilteredResults(filteredList);
-  }, [employeeList, searchValue]);
+  // useEffect(() => {
+  //   const filteredList = employeeList.filter((employee) => {
+  //     if (employee) {
+  //       return employee.firstName.includes(searchValue);
+  //     }
+  //     return false;
+  //   });
+  //   setFilteredResults(filteredList);
+  // }, [employeeList, searchValue]);
 
-  console.log('liste filtrée : ', filteredResults);
+  // console.log('liste filtrée : ', filteredResults);
 
   // Display the filteredEmployeeList in the table
   return (
@@ -37,6 +32,7 @@ const SearchInput = () => {
           type="search"
           role="searchbox"
           placeholder="Search"
+          value={searchValue}
           onChange={handleSearchChange}
         />
         <img src={searchIcon} alt="search icon" className="search-icon" />

@@ -23,14 +23,38 @@ const EmployeeDTO = (data) => {
 export function EmployeeContextProvider({ children }) {
   // I set the initial state of the employee list with the mock data to have some data in the table when the app loads
   const [employeeList, setEmployeeList] = useState(mockEmployeeList);
+  // I create a state to store the search value
+  const [searchValue, setSearchValue] = useState('');
 
+  // I create a state to store the filtered results
+  const [filteredResults, setFilteredResults] = useState([]);
+
+  // I create a function to add an employee to the employee list
   const addEmployee = (employee) => {
     const newList = [...employeeList, EmployeeDTO(employee)];
     setEmployeeList(newList);
   };
 
-  // I create a context value with the employee list and the add employee function
-  const contextValue = { employeeList, addEmployee };
+  // I create a function to globally filter the employee list based on the search value
+
+  const searchEmployee = (value) => {
+    setSearchValue(value);
+    const filteredList = employeeList.filter((employee) => {
+      if (employee) {
+        return employee.firstName.includes(value);
+      }
+      return false;
+    });
+    setFilteredResults(filteredList);
+  };
+
+  // I create a context value with the employee list and the add employee function, the search employee function and the search value
+  const contextValue = {
+    employeeList,
+    addEmployee,
+    searchEmployee,
+    searchValue,
+  };
 
   // Then, I return the provider with the context value and the children
   return (
