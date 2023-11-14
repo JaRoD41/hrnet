@@ -22,11 +22,14 @@ const Form = () => {
       startDate: e.currentTarget.startDate.value,
       department: e.currentTarget.department.value,
     };
+
+    // I add the state abbreviation to the employee object before adding it to the employee list
     const shortState = handleStateSelection(newEmployee.state);
     newEmployee.state = shortState;
     addEmployee(newEmployee);
   };
 
+  // I create a function to get the state abbreviation from the state name
   const handleStateSelection = (choice) => {
     const selectedState = stateOptions.find((state) => state.name === choice);
     return selectedState ? selectedState.abbreviation : '';
