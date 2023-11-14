@@ -1,4 +1,3 @@
-// import { useEffect } from 'react';
 import searchIcon from '../../assets/search-icon.svg';
 import { useEmployees } from '../../utils/useEmployees';
 
@@ -10,18 +9,6 @@ const SearchInput = () => {
   const handleSearchChange = (event) => {
     searchEmployee(event.target.value);
   };
-
-  // useEffect(() => {
-  //   const filteredList = employeeList.filter((employee) => {
-  //     if (employee) {
-  //       return employee.firstName.includes(searchValue);
-  //     }
-  //     return false;
-  //   });
-  //   setFilteredResults(filteredList);
-  // }, [employeeList, searchValue]);
-
-  // console.log('liste filtrée : ', filteredResults);
 
   // Display the filteredEmployeeList in the table
   return (
@@ -42,3 +29,15 @@ const SearchInput = () => {
 };
 
 export default SearchInput;
+
+// useEffect(() => {
+//   const filteredList = employeeList.filter((employee) => {
+//     if (employee) {
+//       return employee.firstName.includes(searchValue);
+//     }
+//     return false;
+//   });
+//   setFilteredResults(filteredList);
+// }, [employeeList, searchValue]);
+
+// console.log('liste filtrée : ', filteredResults);

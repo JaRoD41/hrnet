@@ -38,22 +38,26 @@ export function EmployeeContextProvider({ children }) {
   // I create a function to globally filter the employee list based on the search value
 
   const searchEmployee = (value) => {
+    // I set the search value
     setSearchValue(value);
+
+    // I filter the employee list using Object.values to get the values of the employee object
     const filteredList = employeeList.filter((employee) => {
-      if (employee) {
-        return employee.firstName.includes(value);
-      }
-      return false;
+      return Object.values(employee).some((field) =>
+        field.toString().toLowerCase().includes(value.toLowerCase()),
+      );
     });
     setFilteredResults(filteredList);
+    console.log('Résultats filtrés :', filteredList); // Ajoutez cette ligne
   };
 
-  // I create a context value with the employee list and the add employee function, the search employee function and the search value
+  // I create a context value with the employee list, the add employee function, the search employee function, the search value and the filtered results
   const contextValue = {
     employeeList,
     addEmployee,
     searchEmployee,
     searchValue,
+    filteredResults,
   };
 
   // Then, I return the provider with the context value and the children

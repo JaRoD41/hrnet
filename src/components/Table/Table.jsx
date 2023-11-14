@@ -7,7 +7,15 @@ import { useEmployees } from '../../utils/useEmployees';
 const Table = () => {
   const [page, setPage] = useState(1);
   const [size, setSize] = useState(10);
-  const { employeeList } = useEmployees();
+  const { employeeList, filteredResults } = useEmployees();
+
+  // I attribute the employee list to the table or the filtered results based on the search
+  const employeesToDisplay =
+    filteredResults && filteredResults.length > 0
+      ? filteredResults
+      : employeeList;
+
+  // I create the columns for the table
   const columns = [
     {
       formatter: 'responsiveCollapse',
@@ -89,7 +97,8 @@ const Table = () => {
   return (
     <>
       <ReactTabulator
-        data={employeeList}
+        key={Date.now()}
+        data={employeesToDisplay}
         columns={columns}
         options={{
           layout: 'fitColumns',

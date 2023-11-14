@@ -99,7 +99,7 @@
     height: 2rem;
     border-radius: 0.5rem;
     font-size: 1rem;
-    padding-right: 3em;
-    padding-left: 0.8em;
+    padding-right: 1em;
+    padding-left: 1em;
     color: var(--darker)
 }
