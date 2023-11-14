@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '/node_modules/tabulator-tables/dist/css/tabulator.min.css';
 import { ReactTabulator } from 'react-tabulator';
 import './Table.css';
@@ -7,7 +7,25 @@ import { useEmployees } from '../../utils/useEmployees';
 const Table = () => {
   const [page, setPage] = useState(1);
   const [size, setSize] = useState(10);
-  const { employeeList, filteredResults } = useEmployees();
+  // const { employeeList, filteredResults } = useEmployees();
+
+  ///////////////////////////////////////
+
+  const { employeeList, searchValue } = useEmployees();
+
+  // I create a state to store the filtered results
+  const [filteredResults, setFilteredResults] = useState([]);
+
+  useEffect(() => {
+    const filteredList = employeeList.filter((employee) => {
+      return Object.values(employee).some((field) =>
+        field.toString().toLowerCase().includes(searchValue.toLowerCase()),
+      );
+    });
+    setFilteredResults(filteredList);
+  }, [employeeList, searchValue]);
+
+  /////////////////////////////////////////
 
   // I attribute the employee list to the table or the filtered results based on the search
   const employeesToDisplay =

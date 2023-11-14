@@ -2,12 +2,11 @@ import searchIcon from '../../assets/search-icon.svg';
 import { useEmployees } from '../../utils/useEmployees';
 
 const SearchInput = () => {
-  // Get the employee list, addEmployee function, searchEmployee function and searchValue
-  const { employeeList, addEmployee, searchEmployee, searchValue } =
-    useEmployees();
+  // Get the searchValue and setSearchValue from the context
+  const { searchValue, setSearchValue } = useEmployees();
 
   const handleSearchChange = (event) => {
-    searchEmployee(event.target.value);
+    setSearchValue(event.target.value);
   };
 
   // Display the filteredEmployeeList in the table
@@ -29,15 +28,3 @@ const SearchInput = () => {
 };
 
 export default SearchInput;
-
-// useEffect(() => {
-//   const filteredList = employeeList.filter((employee) => {
-//     if (employee) {
-//       return employee.firstName.includes(searchValue);
-//     }
-//     return false;
-//   });
-//   setFilteredResults(filteredList);
-// }, [employeeList, searchValue]);
-
-// console.log('liste filtrée : ', filteredResults);
