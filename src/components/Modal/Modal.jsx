@@ -1,4 +1,4 @@
-import './Modal.css'
+import './Modal.css';
 
 const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) {
@@ -9,16 +9,11 @@ const Modal = ({ isOpen, onClose }) => {
       <div className="modal-overlay"></div>
       <div className="modal-container">
         <div className="modal-content">
-          {/* <!--Header--> */}
-          <div className="modal-header">Header</div>
           {/* <!--Content--> */}
-          <div className="modal-body">New Employee Successfuly Created !</div>
+          <div className="content">New Employee Successfuly Created !</div>
           {/* <!--Footer--> */}
-          <div className="modal-footer">
-            <button
-              onClick={onClose}
-              className="modal-close-button"
-            >
+          <div className="footer">
+            <button onClick={onClose} className="close-button">
               Fermer
             </button>
           </div>
