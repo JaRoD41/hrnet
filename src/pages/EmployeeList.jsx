@@ -1,10 +1,6 @@
-// import { useContext } from 'react';
 import Header from '../components/Header/Header';
 import Table from '../components/Table/Table';
 import SearchInput from '../components/SearchInput/SearchInput';
-// import { useEmployees } from '../utils/useEmployees';
-// import { EmployeeContext } from '../context/EmployeeContext';
-// import { ThemeContext, ThemeContextProvider } from '../utils/useTheme';
 
 const EmployeeList = () => {
   return (
