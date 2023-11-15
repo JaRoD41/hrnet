@@ -26,30 +26,11 @@ export function EmployeeContextProvider({ children }) {
   // I create a state to store the search value
   const [searchValue, setSearchValue] = useState('');
 
-  // I create a state to store the filtered results
-  // const [filteredResults, setFilteredResults] = useState([]);
-
   // I create a function to add an employee to the employee list
   const addEmployee = (employee) => {
     const newList = [...employeeList, EmployeeDTO(employee)];
     setEmployeeList(newList);
   };
-
-  // I create a function to globally filter the employee list based on the search value
-
-  // const searchEmployee = (value) => {
-  //   // I set the search value
-  //   setSearchValue(value);
-
-  //   // I filter the employee list using Object.values to get the values of the employee object
-  //   const filteredList = employeeList.filter((employee) => {
-  //     return Object.values(employee).some((field) =>
-  //       field.toString().toLowerCase().includes(value.toLowerCase()),
-  //     );
-  //   });
-  //   setFilteredResults(filteredList);
-  //   console.log('Résultats filtrés :', filteredList); // Ajoutez cette ligne
-  // };
 
   // I create a context value with the employee list, the add employee function, the search employee function, the search value and search value state setter
   const contextValue = {
