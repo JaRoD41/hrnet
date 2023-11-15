@@ -7,10 +7,8 @@ import { useEmployees } from '../../utils/useEmployees';
 const Table = () => {
   const [page, setPage] = useState(1);
   const [size, setSize] = useState(10);
-  // const { employeeList, filteredResults } = useEmployees();
 
-  ///////////////////////////////////////
-
+  // I use the custom hook to get the employee list
   const { employeeList, searchValue } = useEmployees();
 
   // I create a state to store the filtered results
@@ -24,8 +22,6 @@ const Table = () => {
     });
     setFilteredResults(filteredList);
   }, [employeeList, searchValue]);
-
-  /////////////////////////////////////////
 
   // I attribute the employee list to the table or the filtered results based on the search
   const employeesToDisplay =
