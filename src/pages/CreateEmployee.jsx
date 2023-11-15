@@ -6,16 +6,23 @@ import Modal from '../components/Modal/Modal';
 const CreateEmployee = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  
+  const handleFormSubmit = () => {
+    setIsOpen(true);
+  };
 
   return (
-    <>
-      <Header page="create" />
-      <main>
-        <Form />
-        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}></Modal>
-      </main>
-    </>
+    <div className="create-employee">
+      <div className={`background ${isOpen ? 'blur' : ''}`}>
+        <Header page="create" />
+        <main>
+          <Form onSubmit={handleFormSubmit} />
+        </main>
+      </div>
+
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <div className="content">New Employee Successfuly Created !</div>
+      </Modal>
+    </div>
   );
 };
 

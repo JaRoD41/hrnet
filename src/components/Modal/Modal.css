@@ -7,6 +7,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Playfair Display', serif;
+    color: var(--dark);
+    font-size: 1.2rem;
 }
 
 .modal-overlay {
@@ -18,7 +21,7 @@
 }
 
 .modal-container {
-    background: white;
+    background: var(--lighter);
     width: 91.666667%;
     max-width: 28rem;
     margin: 0 auto;
@@ -46,13 +49,20 @@
 .close-button {
     outline: none;
     padding: 0.75rem 1rem;
-    background: #9CA3AF;
-    border-radius: 0.375rem;
-    color: black;
+    background: var(--darker);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--light);
+    font-size: 1.2rem;
     cursor: pointer;
     transition: background 0.2s ease-in-out;
 }
 
 .close-button:hover {
-    background: #D1D5DB;
+    background: var(--dark);
+    box-shadow: rgba(126, 146, 47, 0.9) 0 0 22px 6px;
+}
+
+.background.blur {
+    filter: blur(2px);
 }

@@ -6,7 +6,7 @@
   padding: 2% 5% 3% 5%;
   border-radius: 0.5rem;
   box-shadow: rgba(154, 165, 149, 0.2) 0px 8px 24px;
-  background-color: var(--lighter);
+  background: var(--lighter);
 }
 
 #page-role {
@@ -47,7 +47,8 @@
   margin: 1rem auto;
 }
 
-.create-employee-input label {
+.create-employee-input label,
+.create-employee-select label {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
@@ -81,16 +82,17 @@ fieldset {
   display: block;
   margin: 0 auto;
   padding: 0.5rem 1rem;
-  background-color: var(--darker);
+  background: var(--darker);
   color: var(--light);
   border: none;
   border-radius: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.2s ease-in-out;
 }
 
 .save-button:hover {
-  background-color: var(--dark);
+  background: var(--dark);
   box-shadow: rgba(126, 146, 47, 0.9) 0 0 22px 6px;
 }

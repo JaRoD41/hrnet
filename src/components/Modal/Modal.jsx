@@ -1,6 +1,6 @@
 import './Modal.css';
 
-const Modal = ({ isOpen, onClose }) => {
+const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) {
     return null;
   }
@@ -10,11 +10,11 @@ const Modal = ({ isOpen, onClose }) => {
       <div className="modal-container">
         <div className="modal-content">
           {/* <!--Content--> */}
-          <div className="content">New Employee Successfuly Created !</div>
+          <div className="content">{children}</div>
           {/* <!--Footer--> */}
           <div className="footer">
             <button onClick={onClose} className="close-button">
-              Fermer
+              Close
             </button>
           </div>
         </div>

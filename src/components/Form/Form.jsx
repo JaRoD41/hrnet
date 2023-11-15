@@ -4,7 +4,7 @@ import departments from '../../data/departments';
 import states from '../../data/states';
 import { useEmployees } from '../../utils/useEmployees';
 
-const Form = () => {
+const Form = ({onSubmit}) => {
   const departmentOptions = departments;
   const stateOptions = states;
   const { addEmployee } = useEmployees();
@@ -27,6 +27,9 @@ const Form = () => {
     const shortState = handleStateSelection(newEmployee.state);
     newEmployee.state = shortState;
     addEmployee(newEmployee);
+
+    // Call the onSubmit callback after form submission
+    onSubmit();
   };
 
   // I create a function to get the state abbreviation from the state name
