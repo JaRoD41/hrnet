@@ -26,11 +26,16 @@ const Form = ({ onSubmit }) => {
     // I add the state abbreviation to the employee object before adding it to the employee list
     const shortState = handleStateSelection(newEmployee.state);
     newEmployee.state = shortState;
+
+    // I capitalize the first letter of each word in the employee object before adding it to the employee list
     newEmployee.firstName = capitalize(newEmployee.firstName);
     newEmployee.lastName = capitalize(newEmployee.lastName);
     newEmployee.street = capitalize(newEmployee.street);
     newEmployee.city = capitalize(newEmployee.city);
     addEmployee(newEmployee);
+
+    // I reset the form
+    e.currentTarget.reset();
 
     // Call the onSubmit callback after form submission
     onSubmit();
