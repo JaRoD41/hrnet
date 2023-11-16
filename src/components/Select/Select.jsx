@@ -22,6 +22,7 @@ const Select = ({ label, name, options }) => {
           className={`${label}-select`}
           autoComplete="off"
           aria-required="true"
+          required
         >
           {options &&
             options.map((option) => (

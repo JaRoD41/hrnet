@@ -54,6 +54,7 @@ const Form = ({onSubmit}) => {
               name="firstName"
               autoComplete="off"
               aria-required="true"
+              required
               // onChange={handleInputChange}
             />
           </section>
@@ -66,6 +67,7 @@ const Form = ({onSubmit}) => {
               name="lastName"
               autoComplete="off"
               aria-required="true"
+              required
               // onChange={handleInputChange}
             />
           </section>
@@ -78,6 +80,7 @@ const Form = ({onSubmit}) => {
               name="dateOfBirth"
               autoComplete="off"
               aria-required="true"
+              required
               // onChange={handleInputChange}
             />
           </section>
@@ -94,6 +97,7 @@ const Form = ({onSubmit}) => {
               name="street"
               autoComplete="off"
               aria-required="true"
+              required
               // onChange={handleInputChange}
             />
           </section>
@@ -106,6 +110,7 @@ const Form = ({onSubmit}) => {
               name="city"
               autoComplete="off"
               aria-required="true"
+              required
               // onChange={handleInputChange}
             />
           </section>
@@ -118,6 +123,7 @@ const Form = ({onSubmit}) => {
               name="zipCode"
               autoComplete="off"
               aria-required="true"
+              required
               // onChange={handleInputChange}
             />
           </section>
@@ -141,6 +147,7 @@ const Form = ({onSubmit}) => {
               name="startDate"
               autoComplete="off"
               aria-required="true"
+              required
               // onChange={handleInputChange}
             />
           </section>
