@@ -4,7 +4,7 @@ import departments from '../../data/departments';
 import states from '../../data/states';
 import { useEmployees } from '../../utils/useEmployees';
 
-const Form = ({onSubmit}) => {
+const Form = ({ onSubmit }) => {
   const departmentOptions = departments;
   const stateOptions = states;
   const { addEmployee } = useEmployees();
@@ -26,6 +26,10 @@ const Form = ({onSubmit}) => {
     // I add the state abbreviation to the employee object before adding it to the employee list
     const shortState = handleStateSelection(newEmployee.state);
     newEmployee.state = shortState;
+    newEmployee.firstName = capitalize(newEmployee.firstName);
+    newEmployee.lastName = capitalize(newEmployee.lastName);
+    newEmployee.street = capitalize(newEmployee.street);
+    newEmployee.city = capitalize(newEmployee.city);
     addEmployee(newEmployee);
 
     // Call the onSubmit callback after form submission
@@ -37,6 +41,17 @@ const Form = ({onSubmit}) => {
     const selectedState = stateOptions.find((state) => state.name === choice);
     return selectedState ? selectedState.abbreviation : '';
   };
+
+  // I create a function to capitalize the first letter of each word in a string
+
+  const capitalize = (str) => {
+    return str
+      .toLowerCase()
+      .split(' ')
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  };
+
   return (
     <>
       <form action="#" id="create-employee" onSubmit={handleSubmit}>
