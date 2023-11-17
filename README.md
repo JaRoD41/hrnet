@@ -4,9 +4,11 @@
 
 > Faites passer une librairie jQuery vers React
 
+
 <p align="center">
   <img src="https://user.oc-static.com/upload/2020/08/14/15974125765772_image2.jpg">
 </p>
+
 
 > INTRODUCTION
 
@@ -60,5 +62,9 @@ Nous voulons également mesurer des données quantifiables (ex. : temps de charg
 
 ## 📝 Expected deliverables
 
-- A TXT file containing the URL of the GitHub repository
-- A YAML file containing the API documentation using Swagger
+- A TXT file containing the URL of :
+  - the GitHub repository of the converted jQuery plugin (only one plugin)
+  - the GitHub repository of the entire React project
+  - the React converted library published on NPM
+
+- A PDF Lighthouse performance report before/after the React conversion
