@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '/node_modules/tabulator-tables/dist/css/tabulator.min.css';
+import '../../../node_modules/tabulator-tables/dist/css/tabulator.min.css';
 import { ReactTabulator } from 'react-tabulator';
 import './Table.css';
 import { useEmployees } from '../../utils/useEmployees';
