@@ -57,6 +57,12 @@ const Form = ({ onSubmit }) => {
       .join(' ');
   };
 
+  // I check if the user input only contains alphabet characters
+  const isAlphabet = (str) => {
+    const regex = /^[a-zA-Z ]+$/;
+    return regex.test(str);
+  };
+
   return (
     <>
       <form action="#" id="create-employee" onSubmit={handleSubmit}>
@@ -75,7 +81,11 @@ const Form = ({ onSubmit }) => {
               autoComplete="off"
               aria-required="true"
               required
-              // onChange={handleInputChange}
+              onKeyDown={(e) => {
+                if (!isAlphabet(e.key)) {
+                  e.preventDefault();
+                }
+              }}
             />
           </section>
 
@@ -88,7 +98,11 @@ const Form = ({ onSubmit }) => {
               autoComplete="off"
               aria-required="true"
               required
-              // onChange={handleInputChange}
+              onKeyDown={(e) => {
+                if (!isAlphabet(e.key)) {
+                  e.preventDefault();
+                }
+              }}
             />
           </section>
 
@@ -101,7 +115,6 @@ const Form = ({ onSubmit }) => {
               autoComplete="off"
               aria-required="true"
               required
-              // onChange={handleInputChange}
             />
           </section>
         </fieldset>
@@ -118,7 +131,6 @@ const Form = ({ onSubmit }) => {
               autoComplete="off"
               aria-required="true"
               required
-              // onChange={handleInputChange}
             />
           </section>
 
@@ -131,7 +143,11 @@ const Form = ({ onSubmit }) => {
               autoComplete="off"
               aria-required="true"
               required
-              // onChange={handleInputChange}
+              onKeyDown={(e) => {
+                if (!isAlphabet(e.key)) {
+                  e.preventDefault();
+                }
+              }}
             />
           </section>
 
@@ -144,7 +160,6 @@ const Form = ({ onSubmit }) => {
               autoComplete="off"
               aria-required="true"
               required
-              // onChange={handleInputChange}
             />
           </section>
 
@@ -168,7 +183,6 @@ const Form = ({ onSubmit }) => {
               autoComplete="off"
               aria-required="true"
               required
-              // onChange={handleInputChange}
             />
           </section>
 
@@ -177,7 +191,6 @@ const Form = ({ onSubmit }) => {
               label="Department"
               name="department"
               options={departmentOptions}
-              // onChange={handleSelectChange}
             />
           </section>
         </fieldset>
