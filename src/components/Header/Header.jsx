@@ -8,7 +8,13 @@ const Header = ({ page }) => {
   return page === 'list' ? (
     <header>
       <section className="brand">
-        <img src={logo} alt="wealthHealth logo" className="brand-logo" />
+        <img
+          src={logo}
+          alt="wealthHealth logo"
+          className="brand-logo"
+          width={48}
+          height={48}
+        />
         <p className="brand-text">HRNet</p>
       </section>
       <nav aria-label="main navigation" className="nav-links">
@@ -18,6 +24,8 @@ const Header = ({ page }) => {
             src={addEmployeeLogo}
             alt="add employee logo"
             className="add-employee--ico"
+            width={40}
+            height={40}
           />
         </Link>
       </nav>
@@ -25,7 +33,13 @@ const Header = ({ page }) => {
   ) : (
     <header>
       <section className="brand">
-        <img src={logo} alt="wealthHealth logo" className="brand-logo" />
+        <img
+          src={logo}
+          alt="wealthHealth logo"
+          className="brand-logo"
+          width={48}
+          height={48}
+        />
         <p className="brand-text">HRNet</p>
       </section>
       <nav aria-label="main navigation" className="nav-links">
@@ -35,6 +49,8 @@ const Header = ({ page }) => {
             src={employeeTableLogo}
             alt="employee table logo"
             className="employee-list--ico"
+            width={40}
+            height={40}
           />
         </Link>
       </nav>

@@ -21,7 +21,7 @@ const SearchInput = () => {
           value={searchValue}
           onChange={handleSearchChange}
         />
-        <img src={searchIcon} alt="search icon" className="search-icon" />
+        <img src={searchIcon} alt="search icon" className="search-icon" width={19} height={19}/>
       </span>
     </>
   );
