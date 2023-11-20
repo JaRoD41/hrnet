@@ -1,5 +1,6 @@
 import { createContext, useState } from 'react';
-import mockEmployeeList from '../data/mock';
+// import mockEmployeeList from '../data/mock';
+import mockEmployeeList from '../assets/mockEmployeeList.json';
 
 // I create a context to share employee data between components
 export const EmployeeContext = createContext();
