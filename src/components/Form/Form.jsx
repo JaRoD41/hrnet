@@ -3,6 +3,7 @@ import Select from '../Select/Select';
 import departments from '../../data/departments';
 import states from '../../data/states';
 import { useEmployees } from '../../utils/useEmployees';
+import { isAlphabet } from '../../utils/checkUser';
 
 const Form = ({ onSubmit }) => {
   const departmentOptions = departments;
@@ -55,12 +56,6 @@ const Form = ({ onSubmit }) => {
       .split(' ')
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
-  };
-
-  // I check if the user input only contains alphabet characters
-  const isAlphabet = (str) => {
-    const regex = /^[a-zA-Z ]+$/;
-    return regex.test(str);
   };
 
   return (
