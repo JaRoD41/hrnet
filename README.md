@@ -32,7 +32,7 @@ Je suis chargé de radicalement transformer et rajeunir l'application actuelle e
   </a>
 </p>
 
-## 📚 Original jQuery source code and issues
+## :rotating_light: Original jQuery source code and issues
 
 - https://github.com/JaRoD41/P14_HRNet_original_jQuery
 
@@ -46,7 +46,7 @@ Je suis chargé de radicalement transformer et rajeunir l'application actuelle e
 - https://www.npmjs.com/package/react-modal-jarod41
 
 
-## 🚀 Frontend installation
+## :floppy_disk: Frontend installation
 
 - Install NodeJS : [NodeJS](https://nodejs.org/en/)
 - Clone the repo : `git clone https://github.com/JaRoD41/hrnet.git`
