@@ -41,7 +41,9 @@ Je suis chargé de radicalement transformer et rajeunir l'application actuelle e
 
 ## 🚀 Converted React NPM Component
 
-- https://github.com/JaRoD41/components-library-by-jarod41
+- https://github.com/JaRoD41/react-modal-jarod41
+
+- https://www.npmjs.com/package/react-modal-jarod41
 
 
 ## 🚀 Frontend installation
