@@ -58,7 +58,19 @@ Je suis chargé de radicalement transformer et rajeunir l'application actuelle e
 
 Nous voulons également mesurer des données quantifiables (ex. : temps de chargement des pages, appels réseau) pour nous assurer que la conversion de l'application à React améliore effectivement les performances.
 
+> Lighthouse test results :
 
+  - AddEmployee jQuery : 
+  https://github.com/JaRoD41/hrnet/blob/main/src/performances/homePagejQuery.pdf
+
+  - AddEmployee React : 
+  https://github.com/JaRoD41/hrnet/blob/main/src/performances/homePageReact.pdf
+
+  - EmployeeList jQuery :
+  https://github.com/JaRoD41/hrnet/blob/main/src/performances/tablePagejQuery.pdf
+
+  - EmployeeList React :
+  https://github.com/JaRoD41/hrnet/blob/main/src/performances/tablePageReact.pdf
 
 
 
