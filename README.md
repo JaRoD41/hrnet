@@ -54,7 +54,7 @@ Je suis chargé de radicalement transformer et rajeunir l'application actuelle e
 - Launch the app : `npm run dev`
 - I recommend using [VSCode](https://code.visualstudio.com/) with [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) extension
 
-## 📝 Performance Tests
+## :racing_car: Performance Tests
 
 Nous voulons également mesurer des données quantifiables (ex. : temps de chargement des pages, appels réseau) pour nous assurer que la conversion de l'application à React améliore effectivement les performances.
 
@@ -73,6 +73,15 @@ Nous voulons également mesurer des données quantifiables (ex. : temps de charg
   https://github.com/JaRoD41/hrnet/blob/main/src/performances/tablePageReact.pdf
 
 
+## :desktop_computer: Screenshots
+
+<p align="center">
+  <img src="https://github.com/JaRoD41/hrnet/blob/main/public/AddEmployee.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/JaRoD41/hrnet/blob/main/public/EmployeeList.png">
+</p>
 
 ## 📝 Expected deliverables
 
