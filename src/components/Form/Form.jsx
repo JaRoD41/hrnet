@@ -4,6 +4,7 @@ import departments from '../../data/departments';
 import states from '../../data/states';
 import { useEmployees } from '../../utils/useEmployees';
 import { isAlphabet } from '../../utils/checkUser';
+import { isNumber } from '../../utils/checkUser';
 
 const Form = ({ onSubmit }) => {
   const departmentOptions = departments;
@@ -155,6 +156,11 @@ const Form = ({ onSubmit }) => {
               autoComplete="off"
               aria-required="true"
               required
+              onKeyDown={(e) => {
+                if (!isNumber(e.key)) {
+                  e.preventDefault();
+                }
+              }}
             />
           </section>
 
