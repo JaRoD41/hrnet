@@ -5,7 +5,7 @@ import mockEmployeeList from '../data/mock.js';
 // I create a context to share employee data between components
 export const EmployeeContext = createContext();
 
-// I create a function to convert the employee data to a DTO to be used in the context
+// I create a function to convert the employee data to a DTO (Data Transfer Object) to be used in the context
 const EmployeeDTO = (data) => {
   return {
     firstName: data.firstName,
@@ -29,11 +29,12 @@ export function EmployeeContextProvider({ children }) {
 
   // I create a function to add an employee to the employee list
   const addEmployee = (employee) => {
+    // I create a new list with the new employee added
     const newList = [...employeeList, EmployeeDTO(employee)];
     setEmployeeList(newList);
   };
 
-  // I create a context value with the employee list, the add employee function, the search employee function, the search value and search value state setter
+  // I create a context value with the employee list, the add employee function, the search value and search value state setter
   const contextValue = {
     employeeList,
     addEmployee,

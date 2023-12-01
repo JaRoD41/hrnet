@@ -4,6 +4,7 @@ import employeeTableLogo from '../../assets/users-list.svg';
 import addEmployeeLogo from '../../assets/users-add.svg';
 
 import './Header.css';
+// I create a header component that displays a navigation icon depending on the page
 const Header = ({ page }) => {
   return page === 'list' ? (
     <header>

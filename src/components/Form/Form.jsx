@@ -11,6 +11,7 @@ const Form = ({ onSubmit }) => {
   const stateOptions = states;
   const { addEmployee } = useEmployees();
 
+  // I create a function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     const newEmployee = {
