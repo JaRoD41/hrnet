@@ -9,6 +9,7 @@ import { isNumber } from '../../utils/checkUser';
 const Form = ({ onSubmit }) => {
   const departmentOptions = departments;
   const stateOptions = states;
+  // I use the custom hook to get the employee list and the add employee function
   const { addEmployee } = useEmployees();
 
   // I create a function to handle form submission
