@@ -12,6 +12,7 @@ const CreateEmployee = () => {
 
   return (
     <div className="create-employee">
+      {/* I blur the background when the modal is open */}
       <div className={`background ${isOpen ? 'blur' : ''}`}>
         <Header page="create" />
         <main>
