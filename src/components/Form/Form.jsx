@@ -1,5 +1,6 @@
 import './Form.css';
 import Select from '../Select/Select';
+import DatePicker from '../DatePicker/DatePicker';
 import departments from '../../data/departments';
 import states from '../../data/states';
 import { useEmployees } from '../../utils/useEmployees';
@@ -104,17 +105,11 @@ const Form = ({ onSubmit }) => {
             />
           </section>
 
-          <section className="create-employee-input">
-            <label htmlFor="date-of-birth">Date of Birth</label>
-            <input
-              type="date"
-              id="date-of-birth"
-              name="dateOfBirth"
-              autoComplete="off"
-              aria-required="true"
-              required
-            />
-          </section>
+          <DatePicker
+            id="date-of-birth"
+            name="dateOfBirth"
+            label="Date of Birth"
+          />
         </fieldset>
 
         <fieldset name="adress" form="create-employee">
@@ -177,17 +172,8 @@ const Form = ({ onSubmit }) => {
         </fieldset>
         <fieldset name="hr" form="create-employee">
           <legend className="legend-hr">HR infos</legend>
-          <section className="create-employee-input">
-            <label htmlFor="start-date">Start Date</label>
-            <input
-              type="date"
-              id="start-date"
-              name="startDate"
-              autoComplete="off"
-              aria-required="true"
-              required
-            />
-          </section>
+
+          <DatePicker id="start-date" name="startDate" label="Start Date" />
 
           <section className="create-employee-select">
             <Select
